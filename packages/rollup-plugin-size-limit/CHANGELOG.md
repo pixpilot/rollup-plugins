@@ -1,5 +1,11 @@
 # @pixpilot/rollup-plugin-size-limit
 
+## 0.1.1
+
+### Patch Changes
+
+- update package name references to include scope
+
 ## 0.1.0
 
 ### Minor Changes
