@@ -27,12 +27,12 @@ describe('sizeLimit', () => {
   });
 
   it('should throw error when option is true without maxSize', () => {
-    expect(() => sizeLimit(true)).toThrow('Size check enabled but no maxSize specified');
+    expect(() => sizeLimit(true)).toThrow(/Size check enabled but no maxSize specified/u);
   });
 
   it('should throw error for invalid option type', () => {
     expect(() => sizeLimit(null as unknown as number)).toThrow(
-      'Invalid size check option',
+      /Invalid size check option/u,
     );
   });
 

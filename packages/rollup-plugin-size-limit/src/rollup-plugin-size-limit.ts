@@ -4,6 +4,13 @@ import { Buffer } from 'node:buffer';
 
 import bytesFormat from 'bytes';
 
+/**
+ * Wraps text in ANSI escape codes to display it in red color.
+ */
+function red(text: string): string {
+  return `\x1B[31m${text}\x1B[0m`;
+}
+
 export interface SizeLimitConfig {
   /** Maximum allowed size in bytes */
   maxSize: number;
@@ -33,7 +40,9 @@ export function sizeLimit(option: SizeLimitOption): Plugin {
     }
     // If true but no size specified, we can't check anything
     throw new Error(
-      'Size check enabled but no maxSize specified. Please provide a number or config object.',
+      red(
+        'Size check enabled but no maxSize specified. Please provide a number or config object.',
+      ),
     );
   } else if (typeof option === 'object' && option !== null) {
     config = {
@@ -42,7 +51,7 @@ export function sizeLimit(option: SizeLimitOption): Plugin {
     };
   } else {
     // Invalid option type (null, undefined, etc.)
-    throw new Error('Invalid size check option');
+    throw new Error(red('Invalid size check option'));
   }
 
   const { maxSize, throwError } = config;
@@ -76,7 +85,7 @@ export function sizeLimit(option: SizeLimitOption): Plugin {
             errors.push(message);
           } else {
             // Just warn
-            console.warn(`⚠️  ${message}`);
+            console.error(red(`⚠️  ${message}`));
           }
         } else {
           const sizeFormatted = bytesFormat(fileSize);
@@ -87,7 +96,7 @@ export function sizeLimit(option: SizeLimitOption): Plugin {
       }
 
       if (errors.length > 0) {
-        throw new Error(`\n${errors.join('\n')}`);
+        throw new Error(`\n${red(errors.join('\n'))}`);
       }
     },
   };
