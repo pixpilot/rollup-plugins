@@ -4,23 +4,23 @@ import { Buffer } from 'node:buffer';
 
 import bytesFormat from 'bytes';
 
-export interface SizeCheckConfig {
+export interface SizeLimitConfig {
   /** Maximum allowed size in bytes */
   maxSize: number;
   /** Whether to throw an error (true) or just warn (false). Default: true */
   throwError?: boolean;
 }
 
-export type SizeCheckOption = number | SizeCheckConfig | boolean;
+export type SizeLimitOption = number | SizeLimitConfig | boolean;
 
 /**
  * Creates a rollup/tsdown plugin that checks the size of output files
  * @param option - Size check configuration (number for maxSize in bytes, object for detailed config, or boolean to enable/disable)
  * @returns A rollup plugin compatible with tsdown
  */
-export function sizeLimit(option: SizeCheckOption): Plugin {
+export function sizeLimit(option: SizeLimitOption): Plugin {
   // Parse the option
-  let config: SizeCheckConfig;
+  let config: SizeLimitConfig;
 
   if (typeof option === 'number') {
     config = { maxSize: option, throwError: true };
