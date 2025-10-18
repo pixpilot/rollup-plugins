@@ -1,4 +1,4 @@
-# rollup-plugin-size-limit
+# @pixpilot/rollup-plugin-size-limit
 
 A Rollup plugin that enforces bundle size limits during the build process. It checks the size of output files against configurable thresholds and can either warn or throw errors when limits are exceeded.
 
@@ -14,7 +14,7 @@ A Rollup plugin that enforces bundle size limits during the build process. It ch
 ## Installation
 
 ```bash
-pnpm add -D rollup-plugin-size-limit
+pnpm add -D @pixpilot/rollup-plugin-size-limit
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ pnpm add -D rollup-plugin-size-limit
 ### Basic Usage
 
 ```javascript
-import { sizeLimit } from 'rollup-plugin-size-limit';
+import { sizeLimit } from '@pixpilot/rollup-plugin-size-limit';
 
 export default {
   // ... other config
@@ -35,7 +35,7 @@ export default {
 ### Advanced Configuration
 
 ```javascript
-import { sizeLimit } from 'rollup-plugin-size-limit';
+import { sizeLimit } from '@pixpilot/rollup-plugin-size-limit';
 
 export default {
   // ... other config
@@ -68,4 +68,4 @@ export default {
 
 ## License
 
-MIT
+[MIT](../LICENSE)
