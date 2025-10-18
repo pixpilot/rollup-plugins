@@ -1,5 +1,11 @@
 # @pixpilot/rollup-plugin-size-limit
 
+## 0.1.2
+
+### Patch Changes
+
+- rename SizeCheck to SizeLimit for consistency
+
 ## 0.1.1
 
 ### Patch Changes
