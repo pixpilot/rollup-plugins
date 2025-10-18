@@ -1,7 +1,7 @@
 {
   "name": "@pixpilot/rollup-plugin-size-limit",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.17.0",
   "description": "Enforce bundle size limits in Rollup, Vite, and tsdown builds with configurable thresholds and CI/CD integration",
   "author": "PixPilot <m.doaie@hotmail.com>",
