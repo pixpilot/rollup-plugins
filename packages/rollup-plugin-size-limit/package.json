@@ -11,7 +11,14 @@
     "url": "https://github.com/pixpilot/rollup-plugins.git",
     "directory": "packages/rollup-plugin-size-limit"
   },
-  "keywords": ["rollup", "plugin", "size", "limit", "bundle", "build"],
+  "keywords": [
+    "rollup",
+    "plugin",
+    "size",
+    "limit",
+    "bundle",
+    "build"
+  ],
   "exports": "./src/index.ts",
   "files": [
     "dist"

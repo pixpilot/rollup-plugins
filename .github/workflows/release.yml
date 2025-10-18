@@ -41,7 +41,7 @@ jobs:
       - name: Setup project
         uses: ./.github/actions/setup-project
         with:
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
           build: false
 
       - name: Release
