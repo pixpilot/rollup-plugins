@@ -1,5 +1,11 @@
 # @pixpilot/rollup-plugin-size-limit
 
+## 0.1.3
+
+### Patch Changes
+
+- improve error messages with ANSI color formatting
+
 ## 0.1.2
 
 ### Patch Changes
