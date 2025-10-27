@@ -22,7 +22,6 @@ jobs:
       contents: write
       pull-requests: write
       id-token: write
-    if: ${{ !endsWith(github.repository, '@pixpilot/rollup-plugins') }}
 
     steps:
       - name: Generate bot app token
@@ -42,7 +41,7 @@ jobs:
         uses: ./.github/actions/setup-project
         with:
           registry-url: 'https://registry.npmjs.org'
-          build: false
+          build: 'false'
 
       - name: Release
         uses: pixpilot/changesets-autopilot@v1
