@@ -11,6 +11,9 @@
     "url": "https://github.com/pixpilot/rollup-plugins.git",
     "directory": "packages/rollup-plugin-size-limit"
   },
+  "bugs": {
+    "url": "https://github.com/pixpilot/rollup-plugins/issues"
+  },
   "keywords": [
     "rollup",
     "plugin",
